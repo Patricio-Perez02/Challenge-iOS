@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CategoryDetailViewController" customModule="Challenge_iOS" customModuleProvider="target">
+            <connections>
+                <outlet property="errorDescription" destination="kJR-mq-b2t" id="P9x-Jd-XQB"/>
+                <outlet property="errorImageView" destination="H0O-Vm-uu0" id="lwB-g8-eFH"/>
+                <outlet property="errorView" destination="i4R-N3-N3C" id="0cn-of-VlC"/>
+                <outlet property="retryButton" destination="GIL-E0-hON" id="YTO-Ey-aqW"/>
+                <outlet property="tableView" destination="HYJ-ij-uVo" id="MgK-hQ-SgA"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="i4R-N3-N3C">
+                    <rect key="frame" x="0.0" y="59" width="393" height="759"/>
+                    <subviews>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="H0O-Vm-uu0">
+                            <rect key="frame" x="59" y="141.66666666666666" width="275" height="227.99999999999997"/>
+                        </imageView>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kJR-mq-b2t">
+                            <rect key="frame" x="16" y="385.66666666666669" width="361" height="20.333333333333314"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GIL-E0-hON">
+                            <rect key="frame" x="16" y="697" width="361" height="46"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="46" id="PmT-0r-41T"/>
+                            </constraints>
+                            <state key="normal" title="Button"/>
+                            <buttonConfiguration key="configuration" style="tinted" title="Reintentar"/>
+                            <connections>
+                                <action selector="retryAction:" destination="-1" eventType="touchUpInside" id="AcB-v5-yhj"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstItem="GIL-E0-hON" firstAttribute="leading" secondItem="i4R-N3-N3C" secondAttribute="leading" constant="16" id="DAd-YB-Rx4"/>
+                        <constraint firstAttribute="bottom" secondItem="GIL-E0-hON" secondAttribute="bottom" constant="16" id="JlR-wu-I6e"/>
+                        <constraint firstAttribute="trailing" secondItem="GIL-E0-hON" secondAttribute="trailing" constant="16" id="NAF-K7-WU5"/>
+                        <constraint firstItem="H0O-Vm-uu0" firstAttribute="width" secondItem="i4R-N3-N3C" secondAttribute="width" multiplier="0.7" id="WVD-h7-Mrt"/>
+                        <constraint firstAttribute="centerY" secondItem="H0O-Vm-uu0" secondAttribute="bottom" constant="10" id="hfd-7C-zeF"/>
+                        <constraint firstItem="kJR-mq-b2t" firstAttribute="leading" secondItem="i4R-N3-N3C" secondAttribute="leading" constant="16" id="knF-ry-Pqv"/>
+                        <constraint firstItem="kJR-mq-b2t" firstAttribute="top" secondItem="H0O-Vm-uu0" secondAttribute="bottom" constant="16" id="mNB-wS-hVe"/>
+                        <constraint firstItem="H0O-Vm-uu0" firstAttribute="height" secondItem="i4R-N3-N3C" secondAttribute="height" multiplier="0.3" id="tcT-1x-pYr"/>
+                        <constraint firstAttribute="trailing" secondItem="kJR-mq-b2t" secondAttribute="trailing" constant="16" id="x0F-Qd-qch"/>
+                        <constraint firstItem="H0O-Vm-uu0" firstAttribute="centerX" secondItem="i4R-N3-N3C" secondAttribute="centerX" id="xdW-py-vH9"/>
+                    </constraints>
+                </view>
+                <tableView hidden="YES" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="HYJ-ij-uVo">
+                    <rect key="frame" x="0.0" y="59" width="393" height="759"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                </tableView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" name="background"/>
+            <constraints>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="i4R-N3-N3C" secondAttribute="trailing" id="0qx-iY-F76"/>
+                <constraint firstItem="HYJ-ij-uVo" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="6qO-7c-gVR"/>
+                <constraint firstItem="i4R-N3-N3C" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="Heb-jq-gy7"/>
+                <constraint firstItem="HYJ-ij-uVo" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="Hua-Zr-iwn"/>
+                <constraint firstItem="i4R-N3-N3C" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="ati-PH-k7K"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="HYJ-ij-uVo" secondAttribute="bottom" id="iES-RP-YD4"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="HYJ-ij-uVo" secondAttribute="trailing" id="kr3-yD-7Ax"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="i4R-N3-N3C" secondAttribute="bottom" id="xxU-Vh-f2j"/>
+            </constraints>
+            <point key="canvasLocation" x="-33" y="20"/>
+        </view>
+    </objects>
+    <resources>
+        <namedColor name="background">
+            <color red="0.54117647058823526" green="0.68235294117647061" blue="0.8784313725490196" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>
